@@ -1,0 +1,102 @@
+@use "base.scss";
+
+header {
+  padding: 2.25rem 1.68rem;
+  min-height: 100vh;
+
+  @include base.breakpoint(desktop) {
+    padding: 2.25rem 7.875rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav {
+      display: none;
+
+      @include base.breakpoint(desktop) {
+        list-style-type: none;
+        display: flex;
+      }
+
+      &__item {
+        margin-left: 2.25rem;
+      }
+    }
+
+    .mobile-menu {
+      display: block;
+
+      @include base.breakpoint(desktop) {
+        display: none;
+      }
+    }
+  }
+
+  .header-row {
+    margin-top: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @include base.breakpoint(desktop) {
+      flex-direction: row;
+    }
+
+    .col-text {
+      order: 2;
+      flex-basis: 100%;
+      margin-top: 1.6875rem;
+
+      @include base.breakpoint(desktop) {
+        order: 1;
+        flex-basis: 50%;
+      }
+    }
+
+    .col-img {
+      order: 1;
+      display: flex;
+      align-items: center;
+      flex-basis: 100%;
+      position: relative;
+
+      img {
+        display: block;
+        width: 100%;
+
+        @include base.breakpoint(desktop) {
+          width: auto;
+        }
+      }
+
+      @include base.breakpoint(desktop) {
+        order: 2;
+        flex-basis: 50%;
+        justify-content: flex-end;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background: hsl(231, 69%, 60%);
+        z-index: -1;
+        border-top-left-radius: 30% 50%;
+        border-bottom-left-radius: 30% 50%;
+        right: -10rem;
+        bottom: 0rem;
+        width: 100%;
+        height: 70%;
+
+        @include base.breakpoint(desktop) {
+          right: -10rem;
+          bottom: -2rem;
+        }
+      }
+    }
+  }
+}

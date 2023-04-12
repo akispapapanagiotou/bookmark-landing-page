@@ -9,6 +9,7 @@
 
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 // variables
@@ -40,8 +41,10 @@ $breakpoint-desktop: 61.875em;
 
 // mixins
 @mixin breakpoint($point) {
-  @media (min-width: $breakpoint-desktop) {
-    @content;
+  @if $point == desktop {
+    @media (min-width: $breakpoint-desktop) {
+      @content;
+    }
   }
 }
 

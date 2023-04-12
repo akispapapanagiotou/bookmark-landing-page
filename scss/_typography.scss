@@ -1,0 +1,114 @@
+@use "base.scss";
+
+header {
+  .nav {
+    &__link {
+      @include base.breakpoint(desktop) {
+        @include base.font(var(--ff-primary), 0.78rem, var(--fw-medium));
+        color: var(--clr-neutral-dark-blue);
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+
+      &:hover,
+      &:focus {
+        color: var(--clr-primary-red);
+      }
+    }
+
+    .btn {
+      padding: 0.55rem 1.5rem;
+      border-radius: 0.3rem;
+      box-shadow: 0 4px 0.3rem 0 rgba(0, 0, 0, 0.247);
+
+      &--red {
+        background-color: var(--clr-primary-red);
+        color: #fff;
+        border: 2px solid var(--clr-primary-red);
+
+        &:hover {
+          background-color: #fff;
+          color: var(--clr-primary-red);
+        }
+      }
+    }
+  }
+
+  .header-row {
+    .col-text {
+      text-align: center;
+
+      h1 {
+        @include base.font(var(--ff-primary), 1.68rem, 700);
+        color: var(--clr-neutral-dark-blue);
+        line-height: 1.4;
+        margin-bottom: 1rem;
+
+        @include base.breakpoint(desktop) {
+          @include base.font(var(--ff-primary), 2.8125rem, 700);
+          line-height: 1.2;
+        }
+      }
+
+      p {
+        @include base.font(var(--ff-primary), 1rem, var(--ff-primary));
+        color: var(--clr-neutral-gr-blue);
+        line-height: 1.5;
+        margin-bottom: 2rem;
+      }
+
+      @include base.breakpoint(desktop) {
+        text-align: left;
+      }
+
+      &__links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include base.breakpoint(desktop) {
+          justify-content: flex-start;
+        }
+      }
+
+      .btn {
+        padding: 0.55rem 1.5rem;
+        border-radius: 0.3rem;
+        box-shadow: 0 4px 0.3rem 0 rgba(0, 0, 0, 0.247);
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.5s;
+        margin-right: 1rem;
+        display: block;
+        @include base.font(var(--ff-primary), var(--fs-text), var(--fw-medium));
+
+        &--blue {
+          background-color: var(--clr-primary-blue);
+          color: #fff;
+          border: 2px solid var(--clr-primary-blue);
+
+          &:hover,
+          &:focus {
+            background-color: #fff;
+            color: var(--clr-primary-blue);
+          }
+        }
+
+        &--white {
+          background-color: hsla(165, 17%, 95%, 0.664);
+          color: var(--clr-neutral-dark-blue);
+          border: 2px solid hsla(165, 17%, 95%, 0.664);
+
+          &:hover,
+          &:focus {
+            background-color: #fff;
+            color: var(--clr-neutral-dark-blue);
+            border: 2px solid var(--clr-neutral-dark-blue);
+          }
+        }
+      }
+    }
+  }
+}

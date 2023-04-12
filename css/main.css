@@ -8,6 +8,7 @@
 
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 :root {
@@ -28,4 +29,208 @@ html {
     --fs-heading: 2.02rem;
   }
 }
+@media (min-width: 61.875em) {
+  header .nav__link {
+    font-family: var(--ff-primary);
+    font-size: 0.78rem;
+    font-weight: var(--fw-medium);
+    color: var(--clr-neutral-dark-blue);
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+}
+header .nav__link:hover, header .nav__link:focus {
+  color: var(--clr-primary-red);
+}
+header .nav .btn {
+  padding: 0.55rem 1.5rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 4px 0.3rem 0 rgba(0, 0, 0, 0.247);
+}
+header .nav .btn--red {
+  background-color: var(--clr-primary-red);
+  color: #fff;
+  border: 2px solid var(--clr-primary-red);
+}
+header .nav .btn--red:hover {
+  background-color: #fff;
+  color: var(--clr-primary-red);
+}
+header .header-row .col-text {
+  text-align: center;
+}
+header .header-row .col-text h1 {
+  font-family: var(--ff-primary);
+  font-size: 1.68rem;
+  font-weight: 700;
+  color: var(--clr-neutral-dark-blue);
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+@media (min-width: 61.875em) {
+  header .header-row .col-text h1 {
+    font-family: var(--ff-primary);
+    font-size: 2.8125rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+header .header-row .col-text p {
+  font-family: var(--ff-primary);
+  font-size: 1rem;
+  font-weight: var(--ff-primary);
+  color: var(--clr-neutral-gr-blue);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+@media (min-width: 61.875em) {
+  header .header-row .col-text {
+    text-align: left;
+  }
+}
+header .header-row .col-text__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 61.875em) {
+  header .header-row .col-text__links {
+    justify-content: flex-start;
+  }
+}
+header .header-row .col-text .btn {
+  padding: 0.55rem 1.5rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 4px 0.3rem 0 rgba(0, 0, 0, 0.247);
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-right: 1rem;
+  display: block;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-text);
+  font-weight: var(--fw-medium);
+}
+header .header-row .col-text .btn--blue {
+  background-color: var(--clr-primary-blue);
+  color: #fff;
+  border: 2px solid var(--clr-primary-blue);
+}
+header .header-row .col-text .btn--blue:hover, header .header-row .col-text .btn--blue:focus {
+  background-color: #fff;
+  color: var(--clr-primary-blue);
+}
+header .header-row .col-text .btn--white {
+  background-color: hsla(165, 17%, 95%, 0.664);
+  color: var(--clr-neutral-dark-blue);
+  border: 2px solid hsla(165, 17%, 95%, 0.664);
+}
+header .header-row .col-text .btn--white:hover, header .header-row .col-text .btn--white:focus {
+  background-color: #fff;
+  color: var(--clr-neutral-dark-blue);
+  border: 2px solid var(--clr-neutral-dark-blue);
+}
+
+header {
+  padding: 2.25rem 1.68rem;
+  min-height: 100vh;
+}
+@media (min-width: 61.875em) {
+  header {
+    padding: 2.25rem 7.875rem;
+  }
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .nav {
+  display: none;
+}
+@media (min-width: 61.875em) {
+  header nav .nav {
+    list-style-type: none;
+    display: flex;
+  }
+}
+header nav .nav__item {
+  margin-left: 2.25rem;
+}
+header nav .mobile-menu {
+  display: block;
+}
+@media (min-width: 61.875em) {
+  header nav .mobile-menu {
+    display: none;
+  }
+}
+header .header-row {
+  margin-top: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 61.875em) {
+  header .header-row {
+    flex-direction: row;
+  }
+}
+header .header-row .col-text {
+  order: 2;
+  flex-basis: 100%;
+  margin-top: 1.6875rem;
+}
+@media (min-width: 61.875em) {
+  header .header-row .col-text {
+    order: 1;
+    flex-basis: 50%;
+  }
+}
+header .header-row .col-img {
+  order: 1;
+  display: flex;
+  align-items: center;
+  flex-basis: 100%;
+  position: relative;
+}
+header .header-row .col-img img {
+  display: block;
+  width: 100%;
+}
+@media (min-width: 61.875em) {
+  header .header-row .col-img img {
+    width: auto;
+  }
+}
+@media (min-width: 61.875em) {
+  header .header-row .col-img {
+    order: 2;
+    flex-basis: 50%;
+    justify-content: flex-end;
+  }
+}
+header .header-row .col-img::after {
+  content: "";
+  position: absolute;
+  background: hsl(231, 69%, 60%);
+  z-index: -1;
+  border-top-left-radius: 30% 50%;
+  border-bottom-left-radius: 30% 50%;
+  right: -10rem;
+  bottom: 0rem;
+  width: 100%;
+  height: 70%;
+}
+@media (min-width: 61.875em) {
+  header .header-row .col-img::after {
+    right: -10rem;
+    bottom: -2rem;
+  }
+}
+
 /* This is the only scss file that will be compiled to css. *//*# sourceMappingURL=main.css.map */

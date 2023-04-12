@@ -15,11 +15,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
+    <header>
+      <nav>
+        <a href="#"
+          ><img
+            src="assets/logo-bookmark.svg"
+            alt="Bookmark Logo"
+            class="logo-bookmark"
+        /></a>
+        <ul class="nav">
+          <li class="nav__item">
+            <a href="#features" class="nav__link">Features</a>
+          </li>
+          <li class="nav__item">
+            <a href="#pricing" class="nav__link">Pricing</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
+          <li class="nav__item">
+            <a href="#login" class="nav__link btn btn--red">Login</a>
+          </li>
+        </ul>
+        <img
+          src="assets/icon-hamburger.svg"
+          alt="hamburger menu"
+          class="mobile-menu"
+        />
+      </nav>
+
+      <div class="header-row">
+        <div class="col-text">
+          <h1>A Simple Bookmark Manager</h1>
+          <p>
+            A clean and simple interface to organize your favourite websites.
+            Open a new browser tab and see your sites load instantly. Try it for
+            free.
+          </p>
+          <div class="col-text__links">
+            <a href="#" class="btn btn--blue">Get it on Chrome</a>
+            <a href="#" class="btn btn--white">Get it on Firefox</a>
+          </div>
+        </div>
+        <div class="col-img">
+          <img
+            src="assets/illustration-hero.svg"
+            alt="Header image illustration"
+          />
+        </div>
+      </div>
+    </header>
     <!-- javascript -->
     <script src="js/index.js"></script>
   </body>
