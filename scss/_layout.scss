@@ -14,6 +14,11 @@ header {
     justify-content: space-between;
     align-items: center;
 
+    .logo-bookmark {
+      position: relative;
+      z-index: 1000;
+    }
+
     .nav {
       display: none;
 
@@ -29,6 +34,8 @@ header {
 
     .mobile-menu {
       display: block;
+      z-index: 1000;
+      position: relative;
 
       @include base.breakpoint(desktop) {
         display: none;

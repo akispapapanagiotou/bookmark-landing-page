@@ -170,6 +170,10 @@ header nav {
   justify-content: space-between;
   align-items: center;
 }
+header nav .logo-bookmark {
+  position: relative;
+  z-index: 1000;
+}
 header nav .nav {
   display: none;
 }
@@ -184,6 +188,8 @@ header nav .nav__item {
 }
 header nav .mobile-menu {
   display: block;
+  z-index: 1000;
+  position: relative;
 }
 @media (min-width: 61.875em) {
   header nav .mobile-menu {
