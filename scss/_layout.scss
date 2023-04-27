@@ -239,3 +239,56 @@ header {
     }
   }
 }
+
+.download {
+  padding: 3rem 1.5rem 2rem;
+  min-height: 100vh;
+
+  @include base.breakpoint(desktop) {
+    padding: 8rem 10rem 2rem;
+  }
+
+  .download-row {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5rem;
+
+    @include base.breakpoint(desktop) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 0rem;
+    }
+
+    .download-col {
+      p {
+        text-align: center;
+      }
+      flex-basis: 100%;
+      padding: 2rem 1rem 2rem;
+      border-radius: 0.7rem;
+      text-align: center;
+      box-shadow: 0 0 0.6rem 0 hsla(228, 4%, 22%, 0.322);
+
+      @include base.breakpoint(desktop) {
+        flex-basis: 31%;
+      }
+
+      &:nth-child(2) {
+        margin-top: 2rem;
+
+        @include base.breakpoint(desktop) {
+          margin-top: 4rem;
+        }
+      }
+
+      &:nth-child(3) {
+        margin-top: 2rem;
+
+        @include base.breakpoint(desktop) {
+          margin-top: 8rem;
+        }
+      }
+    }
+  }
+}

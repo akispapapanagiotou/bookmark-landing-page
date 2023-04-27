@@ -113,6 +113,24 @@ header {
   }
 }
 
+.btn {
+  @include base.font(var(--ff-primary), var(--fs-text), var(--fw-regular));
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  transition: 0.5s;
+
+  &--blue {
+    color: hsl(0, 0%, 100%);
+    background: hsl(231, 69%, 60%);
+    border: 2px solid hsl(231, 69%, 60%);
+    &:hover {
+      color: hsl(231, 69%, 60%);
+      background: hsl(0, 0%, 100%);
+    }
+  }
+}
+
 .mobile-nav {
   nav {
     text-align: center;
@@ -195,28 +213,56 @@ header {
           text-align: left;
         }
       }
+    }
+  }
+}
 
-      .btn {
-        @include base.font(
-          var(--ff-primary),
-          var(--fs-text),
-          var(--fw-regular)
-        );
-        padding: 0.6rem 1.2rem;
-        border-radius: 0.3rem;
-        text-decoration: none;
-        transition: 0.5s;
+.download {
+  h2 {
+    @include base.font(var(--ff-primary), var(--fs-heading), 700);
+    color: var(--clr-neutral-dark-blue);
+    margin-bottom: 0.7rem;
+    text-align: center;
+  }
 
-        &--blue {
-          color: hsl(0, 0%, 100%);
-          background: hsl(231, 69%, 60%);
-          border: 2px solid hsl(231, 69%, 60%);
-          &:hover {
-            color: hsl(231, 69%, 60%);
-            background: hsl(0, 0%, 100%);
-          }
-        }
+  p {
+    @include base.font(var(--ff-primary), var(--fs-text), var(--fs-regular));
+    color: var(--clr-neutral-gr-blue);
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .download-row {
+    img {
+      margin-bottom: 1.5rem;
+    }
+
+    h3 {
+      @include base.font(var(--ff-primary), 1.1rem, 700);
+      color: var(--clr-neutral-dark-blue);
+      margin-bottom: 0.7rem;
+
+      @include base.breakpoint(desktop) {
+        @include base.font(var(--ff-primary), 1.2rem, 700);
       }
+    }
+
+    p {
+      @include base.font(var(--ff-primary), var(--fs-text), var(--fw-regular));
+      color: var(--clr-neutral-gr-blue);
+      margin-bottom: 2rem;
+      line-height: 1.7;
+
+      @include base.breakpoint(desktop) {
+        text-align: left;
+      }
+    }
+
+    hr {
+      margin: 2rem 0 1.5rem;
+      border: 0;
+      border-bottom: 4px dotted hsl(229, 8%, 60%);
     }
   }
 }

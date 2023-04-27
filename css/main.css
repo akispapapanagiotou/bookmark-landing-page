@@ -133,6 +133,25 @@ header .header-row .col-text .btn--white:hover, header .header-row .col-text .bt
   border: 2px solid var(--clr-neutral-dark-blue);
 }
 
+.btn {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-text);
+  font-weight: var(--fw-regular);
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.btn--blue {
+  color: hsl(0, 0%, 100%);
+  background: hsl(231, 69%, 60%);
+  border: 2px solid hsl(231, 69%, 60%);
+}
+.btn--blue:hover {
+  color: hsl(231, 69%, 60%);
+  background: hsl(0, 0%, 100%);
+}
+
 .mobile-nav nav {
   text-align: center;
 }
@@ -203,23 +222,58 @@ header .header-row .col-text .btn--white:hover, header .header-row .col-text .bt
     text-align: left;
   }
 }
-.features .features-tab .col-text .btn {
+
+.download h2 {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-heading);
+  font-weight: 700;
+  color: var(--clr-neutral-dark-blue);
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+.download p {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-text);
+  font-weight: var(--fs-regular);
+  color: var(--clr-neutral-gr-blue);
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.download .download-row img {
+  margin-bottom: 1.5rem;
+}
+.download .download-row h3 {
+  font-family: var(--ff-primary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--clr-neutral-dark-blue);
+  margin-bottom: 0.7rem;
+}
+@media (min-width: 61.875em) {
+  .download .download-row h3 {
+    font-family: var(--ff-primary);
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+}
+.download .download-row p {
   font-family: var(--ff-primary);
   font-size: var(--fs-text);
   font-weight: var(--fw-regular);
-  padding: 0.6rem 1.2rem;
-  border-radius: 0.3rem;
-  text-decoration: none;
-  transition: 0.5s;
+  color: var(--clr-neutral-gr-blue);
+  margin-bottom: 2rem;
+  line-height: 1.7;
 }
-.features .features-tab .col-text .btn--blue {
-  color: hsl(0, 0%, 100%);
-  background: hsl(231, 69%, 60%);
-  border: 2px solid hsl(231, 69%, 60%);
+@media (min-width: 61.875em) {
+  .download .download-row p {
+    text-align: left;
+  }
 }
-.features .features-tab .col-text .btn--blue:hover {
-  color: hsl(231, 69%, 60%);
-  background: hsl(0, 0%, 100%);
+.download .download-row hr {
+  margin: 2rem 0 1.5rem;
+  border: 0;
+  border-bottom: 4px dotted hsl(229, 8%, 60%);
 }
 
 header {
@@ -452,6 +506,60 @@ header .header-row .col-img::after {
   z-index: -1;
   border-top-right-radius: 30% 50%;
   border-bottom-right-radius: 30% 50%;
+}
+
+.download {
+  padding: 3rem 1.5rem 2rem;
+  min-height: 100vh;
+}
+@media (min-width: 61.875em) {
+  .download {
+    padding: 8rem 10rem 2rem;
+  }
+}
+.download .download-row {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+}
+@media (min-width: 61.875em) {
+  .download .download-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0rem;
+  }
+}
+.download .download-row .download-col {
+  flex-basis: 100%;
+  padding: 2rem 1rem 2rem;
+  border-radius: 0.7rem;
+  text-align: center;
+  box-shadow: 0 0 0.6rem 0 hsla(228, 4%, 22%, 0.322);
+}
+.download .download-row .download-col p {
+  text-align: center;
+}
+@media (min-width: 61.875em) {
+  .download .download-row .download-col {
+    flex-basis: 31%;
+  }
+}
+.download .download-row .download-col:nth-child(2) {
+  margin-top: 2rem;
+}
+@media (min-width: 61.875em) {
+  .download .download-row .download-col:nth-child(2) {
+    margin-top: 4rem;
+  }
+}
+.download .download-row .download-col:nth-child(3) {
+  margin-top: 2rem;
+}
+@media (min-width: 61.875em) {
+  .download .download-row .download-col:nth-child(3) {
+    margin-top: 8rem;
+  }
 }
 
 /* This is the only scss file that will be compiled to css. *//*# sourceMappingURL=main.css.map */
