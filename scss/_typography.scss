@@ -375,3 +375,32 @@ header {
     }
   }
 }
+
+.footer {
+  .links {
+    a {
+      @include base.font(var(--ff-primary), 0.7rem, var(--fw-regular));
+      text-transform: uppercase;
+      text-decoration: none;
+      color: hsl(0, 0%, 100%);
+      transition: 0.5s;
+
+      &:hover {
+        color: var(--clr-primary-red);
+      }
+    }
+  }
+
+  .attribution {
+    @include base.font(var(--ff-primary), var(--fs-text), var(--fw-regular));
+    color: hsl(0, 0%, 100%);
+    margin-top: 2rem;
+    text-align: center;
+
+    a {
+      @include base.font(var(--ff-primary), var(--fs-text), var(--fw-regular));
+      text-decoration: none;
+      color: hsl(229, 8%, 60%);
+    }
+  }
+}

@@ -362,3 +362,56 @@ header {
     }
   }
 }
+
+.footer {
+  background-color: hsl(229, 31%, 21%);
+  padding: 2rem 1.5rem;
+
+  @include base.breakpoint(desktop) {
+    padding: 1.5rem 7rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    @include base.breakpoint(desktop) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+    }
+
+    .logo-bookmark {
+      margin-bottom: 1rem;
+      filter: invert(1) brightness(100%) hue-rotate(180deg);
+
+      @include base.breakpoint(desktop) {
+        margin-bottom: 0;
+      }
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+      list-style-type: none;
+      gap: 1rem;
+
+      @include base.breakpoint(desktop) {
+        flex-direction: row;
+        margin-bottom: 0rem;
+      }
+    }
+
+    .social-links {
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      gap: 2rem;
+    }
+  }
+}
