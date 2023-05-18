@@ -53,3 +53,18 @@ controls[2].addEventListener("click", () => {
   controls[1].classList.remove("active");
   controls[2].classList.add("active");
 });
+
+/* Logic for the drop-down texts in the F.A.Q section */
+
+const texts = document.querySelectorAll(".text");
+const dropDownTexts = document.querySelectorAll(".drop-down-text");
+
+for (let i = 0; i < texts.length; i++) {
+  texts[i].addEventListener("click", () => {
+    if (dropDownTexts[i].style.display == "none") {
+      dropDownTexts[i].style.display = "block";
+    } else {
+      dropDownTexts[i].style.display = "none";
+    }
+  });
+}

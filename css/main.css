@@ -276,6 +276,46 @@ header .header-row .col-text .btn--white:hover, header .header-row .col-text .bt
   border-bottom: 4px dotted hsl(229, 8%, 60%);
 }
 
+.faq h2 {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-heading);
+  font-weight: 700;
+  color: var(--clr-neutral-dark-blue);
+  margin-bottom: 0.7rem;
+}
+.faq p {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-text);
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-gr-blue);
+  line-height: 1.6;
+}
+@media (min-width: 61.875em) {
+  .faq p {
+    line-height: 1.3;
+  }
+}
+.faq .banner .text p {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-text);
+  font-weight: var(--fw-medium);
+  color: var(--clr-dark-gr-blue);
+}
+.faq .banner .drop-down-text p {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-text);
+  font-weight: var(--fw-regular);
+  color: var(--clr-dark-gr-blue);
+  text-align: left;
+  padding: 1rem 0 0;
+  line-height: 1.6;
+}
+@media (min-width: 61.875em) {
+  .faq .banner .drop-down-text p {
+    padding: 1.5rem 0 0.5rem;
+  }
+}
+
 header {
   padding: 2.25rem 1.68rem;
   min-height: 100vh;
@@ -560,6 +600,47 @@ header .header-row .col-img::after {
   .download .download-row .download-col:nth-child(3) {
     margin-top: 8rem;
   }
+}
+
+.faq {
+  padding: 3rem 1.5rem 4rem;
+  text-align: center;
+}
+@media (min-width: 61.875em) {
+  .faq {
+    padding: 4rem 23rem;
+  }
+}
+.faq .banner {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.faq .banner li {
+  width: 100%;
+  list-style: none;
+  padding: 1rem 0;
+  border-bottom: 1px solid hsl(229, 8%, 60%);
+  font-weight: 500;
+}
+.faq .banner li:nth-child(1) {
+  border-top: 1px solid hsl(229, 8%, 60%);
+}
+.faq .banner li .text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.faq .banner li .drop-down-text {
+  display: none;
+}
+.faq .btn {
+  display: inline-block;
+  margin-top: 2rem;
 }
 
 /* This is the only scss file that will be compiled to css. *//*# sourceMappingURL=main.css.map */

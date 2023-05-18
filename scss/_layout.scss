@@ -292,3 +292,49 @@ header {
     }
   }
 }
+
+.faq {
+  padding: 3rem 1.5rem 4rem;
+  text-align: center;
+
+  @include base.breakpoint(desktop) {
+    padding: 4rem 23rem;
+  }
+
+  .banner {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    li {
+      width: 100%;
+      list-style: none;
+      padding: 1rem 0;
+      border-bottom: 1px solid hsl(229, 8%, 60%);
+      font-weight: 500;
+
+      &:nth-child(1) {
+        border-top: 1px solid hsl(229, 8%, 60%);
+      }
+
+      .text {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+      }
+
+      .drop-down-text {
+        display: none;
+      }
+    }
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 2rem;
+  }
+}

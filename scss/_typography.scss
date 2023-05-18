@@ -266,3 +266,48 @@ header {
     }
   }
 }
+
+.faq {
+  h2 {
+    @include base.font(var(--ff-primary), var(--fs-heading), 700);
+    color: var(--clr-neutral-dark-blue);
+    margin-bottom: 0.7rem;
+  }
+
+  p {
+    @include base.font(var(--ff-primary), var(--fs-text), var(--fw-regular));
+    color: var(--clr-neutral-gr-blue);
+    line-height: 1.6;
+
+    @include base.breakpoint(desktop) {
+      line-height: 1.3;
+    }
+  }
+
+  .banner {
+    .text {
+      p {
+        @include base.font(var(--ff-primary), var(--fs-text), var(--fw-medium));
+        color: var(--clr-dark-gr-blue);
+      }
+    }
+
+    .drop-down-text {
+      p {
+        @include base.font(
+          var(--ff-primary),
+          var(--fs-text),
+          var(--fw-regular)
+        );
+        color: var(--clr-dark-gr-blue);
+        text-align: left;
+        padding: 1rem 0 0;
+        line-height: 1.6;
+
+        @include base.breakpoint(desktop) {
+          padding: 1.5rem 0 0.5rem;
+        }
+      }
+    }
+  }
+}
