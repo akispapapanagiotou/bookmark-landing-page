@@ -338,3 +338,27 @@ header {
     margin-top: 2rem;
   }
 }
+
+.contact-us {
+  background-color: var(--clr-primary-blue);
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: #fff;
+
+  @include base.breakpoint(desktop) {
+    padding: 4rem 7rem;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    @include base.breakpoint(desktop) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+}

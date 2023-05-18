@@ -311,3 +311,67 @@ header {
     }
   }
 }
+
+.contact-us {
+  h3 {
+    @include base.font(var(--ff-primary), 0.7rem, var(--fw-medium));
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 5px;
+
+    @include base.breakpoint(desktop) {
+      font-size: 0.8rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  h2 {
+    @include base.font(var(--ff-primary), var(--fs-heading), var(--fw-medium));
+    margin-bottom: 1.5rem;
+
+    @include base.breakpoint(desktop) {
+      margin-bottom: 1.8rem;
+    }
+  }
+
+  .form {
+    .email {
+      @include base.font(var(--ff-primary), var(--fs-text), var(--fw-regular));
+      color: hsl(229, 31%, 21%);
+      position: relative;
+      border: none;
+      border-radius: 0.2rem;
+      outline: none;
+      padding: 0.7rem 5rem 0.7rem 1rem;
+    }
+
+    .btn {
+      color: hsl(0, 0%, 100%);
+      border: 2px solid hsl(0, 94%, 66%);
+      background: hsl(0, 94%, 66%);
+      outline: none;
+      font-size: 0.8rem;
+      border-radius: 0.2rem;
+      padding: 0.7rem 5.56rem;
+      margin-top: 0.5rem;
+      cursor: pointer;
+      transition: 0.5s;
+
+      &--red {
+        color: hsl(0, 0%, 100%);
+        background: hsl(0, 94%, 66%);
+        border: 2px solid hsl(0, 94%, 66%);
+        &:hover {
+          color: hsl(0, 94%, 66%);
+          background: hsl(0, 0%, 100%);
+        }
+      }
+
+      @include base.breakpoint(desktop) {
+        padding: 0.7rem 1rem;
+        margin-top: 0;
+        margin-left: 1rem;
+      }
+    }
+  }
+}

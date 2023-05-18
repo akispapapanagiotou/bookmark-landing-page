@@ -316,6 +316,71 @@ header .header-row .col-text .btn--white:hover, header .header-row .col-text .bt
   }
 }
 
+.contact-us h3 {
+  font-family: var(--ff-primary);
+  font-size: 0.7rem;
+  font-weight: var(--fw-medium);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 5px;
+}
+@media (min-width: 61.875em) {
+  .contact-us h3 {
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+  }
+}
+.contact-us h2 {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-heading);
+  font-weight: var(--fw-medium);
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 61.875em) {
+  .contact-us h2 {
+    margin-bottom: 1.8rem;
+  }
+}
+.contact-us .form .email {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-text);
+  font-weight: var(--fw-regular);
+  color: hsl(229, 31%, 21%);
+  position: relative;
+  border: none;
+  border-radius: 0.2rem;
+  outline: none;
+  padding: 0.7rem 5rem 0.7rem 1rem;
+}
+.contact-us .form .btn {
+  color: hsl(0, 0%, 100%);
+  border: 2px solid hsl(0, 94%, 66%);
+  background: hsl(0, 94%, 66%);
+  outline: none;
+  font-size: 0.8rem;
+  border-radius: 0.2rem;
+  padding: 0.7rem 5.56rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.contact-us .form .btn--red {
+  color: hsl(0, 0%, 100%);
+  background: hsl(0, 94%, 66%);
+  border: 2px solid hsl(0, 94%, 66%);
+}
+.contact-us .form .btn--red:hover {
+  color: hsl(0, 94%, 66%);
+  background: hsl(0, 0%, 100%);
+}
+@media (min-width: 61.875em) {
+  .contact-us .form .btn {
+    padding: 0.7rem 1rem;
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+}
+
 header {
   padding: 2.25rem 1.68rem;
   min-height: 100vh;
@@ -641,6 +706,31 @@ header .header-row .col-img::after {
 .faq .btn {
   display: inline-block;
   margin-top: 2rem;
+}
+
+.contact-us {
+  background-color: var(--clr-primary-blue);
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: #fff;
+}
+@media (min-width: 61.875em) {
+  .contact-us {
+    padding: 4rem 7rem;
+  }
+}
+.contact-us .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+@media (min-width: 61.875em) {
+  .contact-us .form {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
 
 /* This is the only scss file that will be compiled to css. *//*# sourceMappingURL=main.css.map */
