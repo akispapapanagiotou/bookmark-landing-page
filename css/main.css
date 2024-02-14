@@ -1,3 +1,4 @@
+/* This is the only scss file that will be compiled to css. */
 *,
 *::before,
 *::after {
@@ -6,7 +7,8 @@
   box-sizing: inherit;
 }
 
-html {
+html,
+body {
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -29,6 +31,7 @@ html {
     --fs-heading: 2.02rem;
   }
 }
+/* This is the only scss file that will be compiled to css. */
 @media (min-width: 61.875em) {
   header .nav__link {
     font-family: var(--ff-primary);
@@ -409,6 +412,7 @@ header .header-row .col-text .btn--white:hover, header .header-row .col-text .bt
   color: hsl(229, 8%, 60%);
 }
 
+/* This is the only scss file that will be compiled to css. */
 header {
   padding: 2.25rem 1.68rem;
   min-height: 100vh;
@@ -812,6 +816,4 @@ header .header-row .col-img::after {
   align-items: center;
   list-style-type: none;
   gap: 2rem;
-}
-
-/* This is the only scss file that will be compiled to css. *//*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
